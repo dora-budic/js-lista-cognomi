@@ -1,11 +1,12 @@
 // Creare array con i cognomi
-  var surnames = ["Bianchi", "Rossi", "Perlari", "Lodigiani", "Mastrobattista", "Verdi"];
+var surnames = ["Bianchi", "Rossi", "Perlari", "Lodigiani", "Mastrobattista", "Verdi"];
 
 // Chiedere il nome e inserirlo nell'array
-  var surname = prompt("What is your surname?");
-  surnames.push(surname);
+var surname = prompt("What is your surname?");
+var surname = surname.charAt(0).toUpperCase() + surname.substring(1);
+surnames.push(surname);
 
-// Stampare la lista
+// Ordinare e stampare la lista
 surnames.sort();
 
 for (var i = 0; i < surnames.length; i++) {
