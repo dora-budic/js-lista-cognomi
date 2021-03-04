@@ -13,5 +13,10 @@ for (var i = 0; i < surnames.length; i++) {
 }
 
 // Trovare la posizione nella quale si trova il cognome inserito
-var newSurname = surnames.indexOf(surname) + 1;
-document.getElementById('position').innerHTML = "Surname " + surname + " is on " + newSurname + ". place."
+var indexes = [];
+var i = -1;
+while ((i = surnames.indexOf(surname, i+1)) != -1) {
+  indexes.push(i+1);
+}
+
+document.getElementById('position').innerHTML = "Surname " + surname + " is on " + indexes + ". place."
